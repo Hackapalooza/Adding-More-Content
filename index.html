@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Ladies Learning Code</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link href="http://fonts.googleapis.com/css?family=Podkova" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="framework/css/reveal.css">
+		<link rel="stylesheet" href="framework/css/theme/llc.css" id="theme">
+		<link rel="stylesheet" href="framework/lib/css/monokai.css">
+		<link rel="stylesheet" href="framework/css/overrides.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<!-- begin editable section -->
+				<section class="center">
+					<h1>Adding More Content</h1>
+					<ul>
+						<!-- <li><a href="Base Starting Project/final.html">Link to the starter project</a></li> -->
+						<li>Hello! This workshop will be helping you create additional awesomeness (read: content) for your website.</li>
+					</ul>
+				</section>
+				<!-- each <section> element creates a new slide. -->
+				<section class="cover">
+					<h1>Adding More Content</h1>
+					<div class="instructors">
+						<h2>Your Instructor:</h2>
+						<ul>
+							<li>
+								<img src="content/images/haris_avatar.jpg" alt="">
+								<div class="instructor-info">
+									<h3>Haris Mahmood</h3>
+									<p>harismahmood89@gmail.com</p>
+									<p><a href="http://meetharis.com">meetharis.com</a></p>
+									<p><a href="https://twitter.com/harismahmood89">@harismahmood89</a></p>
+								</div>
+							</li>
+						</ul>
+						<div class="credits">
+							<p>A big shout-out to the other instructors, mentors and the Ladies Learning Code team.</p>
+						</div>
+					</div>
+
+				</section>
+				
+				<!-- OUTLINE -->
+				<section>
+					<h1>Course Outline</h1>
+					<h2>Overview</h2>
+					<ul>
+						<li>Importance, Quality, Clarity</li>
+						<li>Start State</li>
+						<li>Pricing Tables</li>
+						<li>Recommendations</li>
+						<li>Blog</li>
+					</ul>
+				</section>
+
+
+				<!-- PRICING TABLES -->
+				<section>
+					<h1>Pricing Tables</h1>
+					<h2>Overview</h2>
+					<ul>
+						<li>Quick Discussion: tables vs divs</li>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>Responsiveness</li>
+					</ul>
+				</section>
+
+				<section class="center">
+					<h1>Quick Discussion</h1>
+					<h2>Tables vs Divs</h2>
+				</section>
+
+				<section>
+					<h1>Example of Table Markup</h1>
+					<pre><code>
+&lt;table>
+  &lt;!-- Table Headers -->
+  &lt;thead>
+    &lt;tr>
+      &lt;th>Column 01&lt;/th>
+      &lt;th>Column 02&lt;/th>
+    &lt;/tr>
+  &lt;/thead>
+
+  &lt;!-- Table Content -->
+  &lt;tbody>
+    &lt;tr>
+      &lt;td>Table Cell&lt;/td>
+      &lt;td>Table Cell&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+      &lt;td>Table Cell&lt;/td>
+      &lt;td>Table Cell&lt;/td>
+    &lt;/tr>
+  &lt;/tbody>
+&lt;/table>
+
+					</code></pre>
+					<p><a href="content/table-markup.html">Link to Table Markup</a></p>
+				</section>
+
+				<section>
+					<h1>HTML - The DIVS Approach</h1>
+					<h2>Container</h2>
+					<pre><code>
+&lt;section id="pricing" class="pricing box">
+
+&lt;/section>
+					</code></pre>
+				</section>
+
+				<section>
+					<h1>HTML (Continued)</h1>
+					<h2>Building a pricing plan</h2>
+					<pre><code>
+&lt;!doctype html>
+
+&lt;section id="pricing" class="pricing box">
+    &lt;h2>Pricing Plans&lt;/h2>
+    &lt;ul class="plan starter">
+      &lt;li>Starter&lt;/li> &lt;!-- PLAN NAME -->
+      &lt;li>$9/Month&lt;/li> &lt;!-- PLAN PRICE -->
+      &lt;li>10GB Disk Space&lt;/li>
+      &lt;li>100GB Bandwidth&lt;/li>
+      &lt;li>10 Email Accounts&lt;/li>
+      &lt;li>Unlimited Subdomains&lt;/li>
+      &lt;li>Free Shared SSL&lt;/li>
+      &lt;li>Free backups&lt;/li>
+      &lt;li>Full time support&lt;/li>
+      &lt;!-- ADDITIONAL DETAILS GO HERE -->
+      &lt;li>&lt;a href="#">Sign Up&lt;/a>&lt;/li>
+    &lt;/ul>
+&lt;/section>
+					</code></pre>
+				</section>
+
+				<section>
+					<h1>CSS</h1>
+					<h2>General pricing plan styling</h2>
+					<pre><code>
+section.pricing{
+  text-align: center;
+}
+
+#pricing .plan{
+  list-style-type: none;
+  width: 22%;
+  min-width: 300px;
+  margin: 0 1%;
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+#pricing .plan li{
+  padding: 15px;
+  font-size: 12px;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h1>Enhancing our pricing plan</h1>
+					<h2>Heading</h2>
+					<p>HTML</p>
+					<pre><code>
+&lt;!doctype html>
+
+&lt;li class="heading">Starter&lt;/li>						
+					</code></pre>
+					<p>CSS</p>
+					<pre><code>
+#pricing .plan .heading{
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color:#666;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h1>Enhancing our pricing plan</h1>
+					<h2>Table "stripes"</h2>
+					<p>HTML</p>
+					<pre><code>
+&lt;!doctype html>
+
+&lt;li class="odd heading">Starter&lt;/li>
+&lt;li>9/Month&lt;/li>
+&lt;li class="odd">10GB Disk Space&lt;/li>
+&lt;li>100GB Bandwidth&lt;/li>
+&lt;li class="odd">10 Email Accounts&lt;/li>
+					</code></pre>
+					<p>CSS</p>
+					<pre><code>
+.pricing .plan .odd{
+  background-color: #f4f4f4;
+}
+					</code></pre>
+				</section>
+
+
+
+
+
+				<!-- <section class="center">
+					<h1>This slide is centered because it has the class "center" on the &lt;section> element!</h1>
+				</section> -->
+
+				<!-- <section>
+					<h1>A slide with an Image</h1>
+					<img src="content/images/blank_output.jpg">
+				</section> -->
+
+				<section>
+					<h1>A slide with some HTML Code</h1>
+					<pre><code>
+<!-- remember to escape the < character -->
+&lt;!doctype html>
+&lt;head>
+  &lt;title>Ladies Learning Code HTML and CSS&lt;/title>
+  &lt;style>
+    p {
+    color: red;
+    text-decoration: underline;
+    }
+  &lt;/style>
+&lt;/head>
+&lt;body>
+  &lt;p>This is a paragraph&lt;/p>
+&lt;/body>
+&lt;/html>
+					</code></pre>
+				</section>
+
+				<section data-markdown>
+					# You can write your slides in mardown if you add the `data-markdown` attribute
+
+					- markdown makes it a bit easier to write content for the web
+					- learn more about [markdown syntax](https://daringfireball.net/projects/markdown/syntax)
+
+					## A level 2 header in markdown
+
+					```
+						\\ some code in markdown
+					```
+				</section>
+
+				<!-- end editable section -->
+
+			</div>
+
+		</div>
+
+		<script src="framework/lib/js/head.min.js"></script>
+		<script src="framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
