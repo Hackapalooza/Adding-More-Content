@@ -41,10 +41,7 @@
 				<!-- begin editable section -->
 				<section class="center">
 					<h1>Adding More Content</h1>
-					<ul>
-						<!-- <li><a href="Base Starting Project/final.html">Link to the starter project</a></li> -->
-						<li>Hello! This workshop will be helping you create additional awesomeness (read: content) for your website.</li>
-					</ul>
+					<p>Hello! This workshop will be helping you create additional awesomeness (read: content) for your website.</p>
 				</section>
 				<!-- each <section> element creates a new slide. -->
 				<section class="cover">
@@ -68,8 +65,14 @@
 					</div>
 
 				</section>
+
+
+
+
+
 				
-				<!-- OUTLINE -->
+				<!-- OUTLINE
+                ==================================== -->
 				<section>
 					<h1>Course Outline</h1>
 					<h2>Overview</h2>
@@ -82,8 +85,87 @@
 					</ul>
 				</section>
 
+                <section class="center">
+                    <h1>Importance, Quality, Clarity</h1>
+                </section>
 
-				<!-- PRICING TABLES -->
+                <section class="center">
+                    <h1>Qualtiy</h1>
+                </section>
+
+                <section class="center">
+                    <h1>Stock Images</h1>
+                    <img src="http://cdn2.hubspot.net/hub/53/file-23126845-jpg/blog/images/istock_000019847249xsmall.jpg?t=1402089660106" alt="">
+                    <p>We Work Hard, But We Have Fun</p>
+                </section>
+
+                <section class="center">
+                    <h1>no.</h1>
+                </section>
+
+                <section class="center">
+                    <h1>Stock Images</h1>
+                    <img src="http://cdn2.hubspot.net/hub/53/file-23126843-jpg/blog/images/istock_000019823602xsmall.jpg?t=1402089660106" alt="">
+                    <p>Business Person Being Stressed</p>
+                </section>
+
+                 <section class="center">
+                    <h1>please stop.</h1>
+                </section>
+
+                <section class="center">
+                    <h1>Stock Images</h1>
+                    <img src="http://cdn2.hubspot.net/hub/53/file-23126807-jpg/blog/images/istock_000017948519xsmall.jpg?t=1402089660106" alt="">
+                    <p>Best Business Meeting Ever</p>
+                </section>
+
+                 <section class="center">
+                    <h1>lies.</h1>
+                </section>
+
+                <section class="center">
+                    <h1>Clarity</h1>
+                    <h2>A user show know <strong>exactly</strong> what your site is about within a couple seconds</h2>
+                </section>
+
+                <section class="center">
+                    <h1>Animations</h1>
+                    <h2>Animations are great. As long as things stop moving so I can actually click something.</h2>
+                    <a href="http://sundaymorning.ekwc.nl/">sundaymorning.ekwc.nl</a>
+                </section>
+
+                <section class="center">
+                    <h1>No Rainbows</h1>
+                    <img src="http://www.uwpgroup.co.uk/wp-content/uploads/2014/04/accept_jesus_forever.png" alt="">
+                </section>
+
+                <section class="center">
+                    <h1>No Blinking Anything</h1>
+                    <a href="http://ronoslund.com/">ronoslund.com</a>
+                </section>
+
+                <section class="center">
+                    <h1>No Clipart</h1>
+                    <img src="http://petersoutowood.com/wp-content/uploads/2013/03/word-paperclip.jpg" alt="">
+                </section>
+
+                <section class="center">
+                    <h1>Death To Comic Sans MS</h1>
+                </section>
+
+
+
+
+                <section class="center">
+                    <h1>Start State</h1>
+                </section>
+
+
+				
+
+
+                <!-- PRICING TABLES
+                ==================================== -->
 				<section>
 					<h1>Pricing Tables</h1>
 					<h2>Overview</h2>
@@ -168,7 +250,7 @@
 					<h1>CSS</h1>
 					<h2>General pricing plan styling</h2>
 					<pre><code>
-section.pricing{
+#pricing{
   text-align: center;
 }
 
@@ -225,58 +307,330 @@ section.pricing{
 					</code></pre>
 					<p>CSS</p>
 					<pre><code>
-.pricing .plan .odd{
+#pricing .plan .odd{
   background-color: #f4f4f4;
 }
 					</code></pre>
 				</section>
 
+				<section>
+					<h1>Enhancing our pricing plan</h1>
+					<h2>Stlying the "price"</h2>
+					<p>HTML</p>
+					<pre><code>
+&lt;!doctype html>
+
+&lt;li>
+  &lt;span class="plan-price">$9&lt;/span>
+  &lt;sub>/ Month&lt;/sub>
+&lt;/li>
+					</code></pre>
+					<p>CSS</p>
+					<pre><code>
+#pricing .plan .plan-price{
+  font-size: 24px;
+}
+
+#pricing .plan sub{
+  text-transform: uppercase;
+  margin-left:2px;
+}
+					</code></pre>
+				</section>
+
+                <section>
+                    <h1>Enhancing our pricing plan</h1>
+                    <h2>Multiple plans</h2>
+                    <p>CSS</p>
+                    <pre><code>
+#pricing .plan.starter .plan-price{
+  color: #5D9CEC;
+}
+
+#pricing .plan.starter .signup{
+  background-color: #5D9CEC;
+}
+
+#pricing .plan .signup a{
+  color: white;
+  text-decoration: none;
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>Enhancing our pricing plan</h1>
+                    <h2>Multiple plans</h2>
+                    <p>CSS</p>
+                    <pre><code>
+/* Starter Plan */
+#pricing .plan.starter .plan-price{
+  color: #5D9CEC;
+}
+
+#pricing .plan.starter .signup{
+  background-color: #5D9CEC;
+}
+
+/* Basic Plan */
+#pricing .plan.basic .plan-price{
+  color: #48CFAE;
+}
+
+#pricing .plan.basic .signup{
+  background-color: #48CFAE;
+}
+
+/* Premium Plan */
+#pricing .plan.premium .plan-price{
+  color: #ED5564;
+}
+
+#pricing .plan.premium .signup{
+  background-color: #ED5564;
+}
+
+/* Master Plan */
+#pricing .plan.master .plan-price{
+  color: #FFAD33;
+}
+
+#pricing .plan.master .signup{
+  background-color: #FFAD33;
+}
+                    </code></pre>
+                </section>
 
 
 
 
-				<!-- <section class="center">
-					<h1>This slide is centered because it has the class "center" on the &lt;section> element!</h1>
-				</section> -->
+
+
+
+
+
+
+                <!-- RECOMMENDED BY
+                ==================================== -->
+                <section class="center">
+                    <h1>Recommended By</h1>
+                    <h2>(OR) Testimonials</h2>
+                </section>
+
+                <section>
+                    <h1>Recommended By</h1>
+                    <h2>Overview</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Responsiveness</li>
+                    </ul>
+                </section>
+
+
+                <section>
+                    <h1>Recommended By</h1>
+                    <p>HTML</p>
+                    <pre><code>
+&lt;!doctype html>
+
+&lt;section id="recommended" class="recommended box">
+    &lt;h2>Recommended By Folks At&lt;/h2>
+    &lt;div class="companies">
+      &lt;img src="images/gibson_logo.png" class="company"/>
+      &lt;img src="images/netflix_logo.png" class="company"/>
+      &lt;img src="images/google_logo.png" class="company"/>
+      &lt;!-- Insert More Companies Here -->
+    &lt;/div>
+&lt;/section>
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>Recommended By</h1>
+                    <p>CSS</p>
+                    <pre><code>
+#recommended{
+  text-align: center;
+}
+
+#recommended .companies{
+  padding: 70px 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #e2e2e2;
+}
+
+#recommended .company{
+  height: 50px;
+  padding: 20px 20px;
+}
+                    </code></pre>
+                </section>
+
+
+                
+
+
+
+                
+                <!-- BLOG POSTS 
+                ==================================== -->
+                <section class="center">
+                    <h1>Blog Posts</h1>
+                </section>
+
+                <section>
+                    <h1>Blog Posts</h1>
+                    <h2>Overview</h2>
+                    <ul>
+                        <li>HTML: Starting Structure</li>
+                        <li>HTML: Post Header</li>
+                        <li>CSS</li>
+                        <li>HTML + CSS: Blog Description</li>
+                        <li>Responsiveness</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Blog Posts</h1>
+                    <h2>Starting Structure</h2>
+                    <p>HTML</p>
+                    <pre><code>
+&lt;!doctype html>
+
+&lt;section id="blog" class="blog box">
+
+    &lt;h2>Recent Posts</h2>
+    &lt;div class="post">
+      &lt;header class="post-header"> &lt;/header>
+
+      &lt;div class="blog-description"> &lt;/div>
+    &lt;/div>
+
+&lt;/section>
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>Blog Posts</h1>
+                    <h2>Post Header</h2>
+                    <p>HTML - Expanding out the Post Header</p>
+                    <pre><code>
+&lt;!doctype html>
+
+&lt;header class="post-header">
+    &lt;img src="images/profile.jpg" class="post-avatar">
+    &lt;h4 class="post-title">Blogpost Title&lt;/h4>
+    &lt;p class="post-meta">
+      By 
+      &lt;a href="#" class="post-author">Haris Mahmood&lt;/a> 
+      under &lt;a href="#" class="post-category">JavaScript&lt;/a> 
+      &lt;a href="#" class="post-category">Rails&lt;/a>
+    &lt;/p>
+&lt;/header>
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>Blog Posts</h1>
+                    <p>CSS</p>
+                    <pre><code>
+#blog .post{
+  text-align: left;
+  margin: 30px 0;
+}
+
+#blog .post .post-avatar{
+  float: left;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+#blog .post .post-title{
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>Blog Posts</h1>
+                    <p>CSS (Continued)</p>
+                    <pre><code>
+#blog .post .post-meta{
+  color: #999999;
+  margin: 5px 0 15px;
+}
+
+#blog .post .post-author{
+  color: #3d92c9;
+  text-decoration: none;
+}
+
+#blog .post .post-author:hover{
+  text-decoration: underline;
+}
+
+#blog .post .post-category{
+  margin: 0 0.1em;
+padding: 0.3em 1em;
+color: #fff;
+background: #df2d4f;
+font-size: 80%;
+text-decoration: none;
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1>Blog Posts</h1>
+                    <p>Blog Description Content</p>
+                    <ul>
+                        <li><a href="http://lipsum.com/">lipsum</a></li>
+                        <li><a href="http://hipsum.co/">Hipster Ipsum</a></li>
+                        <li><a href="http://pirateipsum.me/">Pirate Ipsum</a></li>
+                    </ul>
+                    <p>CSS</p>
+                    <pre><code>
+#blog .post .blog-description{
+  line-height: 26px;
+}
+                    </code></pre>
+
+                </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- FINISHED
+                ==================================== -->
+                <section class="center">
+                    <h1>And We're Done!</h1>
+                </section>
+
+
+                
+
 
 				<!-- <section>
 					<h1>A slide with an Image</h1>
 					<img src="content/images/blank_output.jpg">
 				</section> -->
 
-				<section>
-					<h1>A slide with some HTML Code</h1>
-					<pre><code>
-<!-- remember to escape the < character -->
-&lt;!doctype html>
-&lt;head>
-  &lt;title>Ladies Learning Code HTML and CSS&lt;/title>
-  &lt;style>
-    p {
-    color: red;
-    text-decoration: underline;
-    }
-  &lt;/style>
-&lt;/head>
-&lt;body>
-  &lt;p>This is a paragraph&lt;/p>
-&lt;/body>
-&lt;/html>
-					</code></pre>
-				</section>
 
-				<section data-markdown>
-					# You can write your slides in mardown if you add the `data-markdown` attribute
-
-					- markdown makes it a bit easier to write content for the web
-					- learn more about [markdown syntax](https://daringfireball.net/projects/markdown/syntax)
-
-					## A level 2 header in markdown
-
-					```
-						\\ some code in markdown
-					```
-				</section>
 
 				<!-- end editable section -->
 
